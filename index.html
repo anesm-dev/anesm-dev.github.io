@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anes Hamouti Mohamed | Cloud & Data Engineer</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-hover-effect {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover-effect:hover {
+            transform: translateY(-8px);
+        }
+
+        .cursor-trail {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: rgba(124, 58, 237, 0.5);
+            pointer-events: none;
+            filter: blur(6px);
+            z-index: 9999;
+        }
+
+        .typewriter {
+            overflow: hidden;
+            border-right: 2px solid #8b5cf6;
+            white-space: nowrap;
+            animation: typing 3s steps(40, end), blink 0.8s infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent }
+        }
+
+        .skill-bar {
+            height: 6px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 3px;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Cursor -->
+<div id="cursor-trail" class="cursor-trail hidden md:block"></div>
+
+<!-- NAV -->
+<nav class="fixed w-full z-50 bg-gray-900/80 backdrop-blur border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+        <span class="text-2xl font-bold gradient-text">Portfolio</span>
+        <div class="hidden md:flex space-x-6">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="min-h-screen flex items-center max-w-7xl mx-auto px-6 pt-24">
+    <div>
+        <h1 class="text-5xl font-bold mb-4">
+            <span class="gradient-text">Hello, I'm</span>
+            <span class="typewriter">Anes Hamouti Mohamed</span>
+        </h1>
+        <h2 class="text-2xl text-gray-300 mb-6">
+            Cloud & <span class="gradient-text">Data Engineer</span> | Networking Enthusiast
+        </h2>
+        <p class="text-gray-400 max-w-xl mb-8">
+            Results-driven and fast-learning tech enthusiast with strong foundations in
+            Python, SQL, Networking, and Cloud Platforms (AWS & Azure). Passionate about
+            automation, scalable systems, and data-driven solutions.
+        </p>
+
+        <div class="flex gap-4 mb-10">
+            <a href="#projects" class="px-6 py-3 bg-indigo-600 rounded-lg">View Projects</a>
+            <a href="#contact" class="px-6 py-3 border border-indigo-500 rounded-lg">Contact</a>
+        </div>
+
+        <div class="flex space-x-6 text-2xl text-gray-400">
+            <a href="https://anesm-dev.github.io"><i class="fas fa-globe"></i></a>
+            <a href="mailto:anes44603@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+213551054538"><i class="fas fa-phone"></i></a>
+            <a href="https://github.com"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="max-w-7xl mx-auto px-6 py-20">
+    <h2 class="text-4xl font-bold mb-8 text-center">About <span class="gradient-text">Me</span></h2>
+
+    <p class="text-gray-400 max-w-3xl mx-auto text-center mb-8">
+        I am a Cloud & Data Engineer with a strong background in Python, SQL, Networking,
+        and cloud platforms such as AWS and Microsoft Azure.
+        I enjoy designing scalable infrastructures, automating workflows, and working
+        with real-world data problems.
+    </p>
+
+    <p class="text-gray-400 max-w-3xl mx-auto text-center">
+        Actively seeking remote or international opportunities where I can contribute to
+        high-impact projects while continuously growing in cloud architecture and data engineering.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="max-w-7xl mx-auto px-6 py-20 bg-gray-900/50 rounded-3xl">
+    <h2 class="text-4xl font-bold mb-12 text-center">My <span class="gradient-text">Skills</span></h2>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+        <!-- Coding -->
+        <div>
+            <h3 class="text-xl mb-4">Technical Skills</h3>
+
+            <div class="mb-4">
+                <div class="flex justify-between">
+                    <span>Python</span><span>90%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-progress" style="width:90%"></div></div>
+            </div>
+
+            <div class="mb-4">
+                <div class="flex justify-between">
+                    <span>SQL</span><span>85%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-progress" style="width:85%"></div></div>
+            </div>
+
+            <div>
+                <div class="flex justify-between">
+                    <span>Bash / Linux</span><span>75%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-progress" style="width:75%"></div></div>
+            </div>
+        </div>
+
+        <!-- Cloud -->
+        <div>
+            <h3 class="text-xl mb-4">Cloud & Systems</h3>
+
+            <ul class="space-y-3 text-gray-400">
+                <li>☁ AWS (S3, EC2, IAM)</li>
+                <li>☁ Azure (VM, Blob, Portal)</li>
+                <li>🐳 Docker (Basic)</li>
+                <li>🌐 Networking (TCP/IP, DNS, NAT, Routing)</li>
+                <li>🔁 CI/CD & GitHub Actions</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="max-w-7xl mx-auto px-6 py-20">
+    <h2 class="text-4xl font-bold mb-12 text-center">My <span class="gradient-text">Projects</span></h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="card-hover-effect bg-gray-800/50 p-6 rounded-xl">
+            <h3 class="text-xl font-bold mb-2">Student Portal Web App</h3>
+            <p class="text-gray-400 mb-3">
+                Web app allowing students to submit profiles and upload documents.
+                Automated email system improved admin efficiency by 40%.
+            </p>
+            <span class="text-sm text-indigo-400">HTML • CSS • JS • PHP • MySQL</span>
+        </div>
+
+        <div class="card-hover-effect bg-gray-800/50 p-6 rounded-xl">
+            <h3 class="text-xl font-bold mb-2">Cloud Portfolio Deployment</h3>
+            <p class="text-gray-400 mb-3">
+                Deployed static portfolio on AWS S3 with CI/CD using GitHub Actions.
+                Reduced deployment time by 60%.
+            </p>
+            <span class="text-sm text-indigo-400">AWS • S3 • CI/CD</span>
+        </div>
+
+        <div class="card-hover-effect bg-gray-800/50 p-6 rounded-xl">
+            <h3 class="text-xl font-bold mb-2">Network Simulation Lab</h3>
+            <p class="text-gray-400 mb-3">
+                Designed and simulated multi-router network with routing and NAT.
+                Tested connectivity and troubleshooting.
+            </p>
+            <span class="text-sm text-indigo-400">Cisco Packet Tracer</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="max-w-7xl mx-auto px-6 py-20">
+    <h2 class="text-4xl font-bold mb-10 text-center">Get In <span class="gradient-text">Touch</span></h2>
+
+    <div class="text-center text-gray-400 space-y-3">
+        <p>Email: <a href="mailto:anes44603@gmail.com" class="text-indigo-400">anes44603@gmail.com</a></p>
+        <p>Phone: +213 551 054 538</p>
+        <p>Portfolio: <a href="https://anesm-dev.github.io/" class="text-indigo-400">anesm-dev.github.io</a></p>
+        <p>Location: Algeria</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-10 border-t border-gray-800">
+    <p class="text-gray-500 text-sm">
+        © 2025 Anes Hamouti Mohamed. All rights reserved.
+    </p>
+</footer>
+
+<script>
+    const trail = document.getElementById("cursor-trail");
+    let x=0,y=0,tx=0,ty=0;
+    document.addEventListener("mousemove",e=>{x=e.clientX;y=e.clientY});
+    function loop(){
+        tx+=(x-tx)*0.15;
+        ty+=(y-ty)*0.15;
+        trail.style.left=tx+"px";
+        trail.style.top=ty+"px";
+        requestAnimationFrame(loop);
+    }
+    loop();
+</script>
+
+</body>
+</html>
