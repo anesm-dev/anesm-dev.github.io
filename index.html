@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anes Hamouti Mohamed | Cloud and Systems Engineer</title>
+
+  <meta name="description" content="Anes Hamouti Mohamed - Cloud and Systems Engineer. Premium business websites, cloud deployments, and managed hosting workflows." />
+  <meta name="author" content="Anes Hamouti Mohamed" />
+  <meta name="theme-color" content="#05070d" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Anes Hamouti Mohamed | Cloud and Systems Engineer" />
+  <meta property="og:description" content="From idea to launch: cloud systems, web engineering, and managed hosting with premium execution." />
+  <meta property="og:image" content="https://anesm-dev.github.io/fikratech.jpg" />
+  <meta property="og:url" content="https://anesm-dev.github.io/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Anes Hamouti Mohamed | Cloud and Systems Engineer" />
+  <meta name="twitter:description" content="From idea to launch: cloud systems, web engineering, and managed hosting with premium execution." />
+  <meta name="twitter:image" content="https://anesm-dev.github.io/fikratech.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #05070d;
+      --bg-soft: #0b1325;
+      --surface: #0f1a34;
+      --surface-2: #131f3d;
+      --text: #edf2ff;
+      --muted: #a6b6db;
+      --line: rgba(141, 167, 220, 0.24);
+      --gold: #d8b36b;
+      --gold-strong: #f1cf89;
+      --cyan: #5ed8ff;
+      --danger: #ff6b6b;
+      --radius: 18px;
+      --container: min(1180px, calc(100% - 2.2rem));
+      --shadow-soft: 0 18px 48px rgba(2, 8, 22, 0.5);
+      --shadow-hover: 0 26px 68px rgba(2, 8, 22, 0.64);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Manrope", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 560px at -8% -10%, rgba(94, 216, 255, 0.2), transparent 55%),
+        radial-gradient(900px 460px at 112% 114%, rgba(216, 179, 107, 0.2), transparent 58%),
+        linear-gradient(180deg, #05070d 0%, #060a14 36%, #070d1b 100%);
+      overflow-x: hidden;
+    }
+
+    body.nav-locked {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 12px;
+      z-index: 110;
+      background: #ffffff;
+      color: #020710;
+      border-radius: 9px;
+      padding: 0.65rem 0.85rem;
+      font-weight: 700;
+    }
+
+    .skip-link:focus {
+      left: 12px;
+    }
+
+    .noise {
+      position: fixed;
+      inset: 0;
+      z-index: -3;
+      pointer-events: none;
+      opacity: 0.12;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.32) 0.7px, transparent 0.7px);
+      background-size: 2px 2px;
+      mix-blend-mode: soft-light;
+    }
+
+    .grid-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      opacity: 0.16;
+      background-image:
+        linear-gradient(rgba(173, 197, 244, 0.36) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(173, 197, 244, 0.36) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: radial-gradient(circle at center, black 42%, transparent 86%);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--line);
+      background: rgba(6, 10, 19, 0.82);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-wrap,
+    .section-wrap,
+    .footer-wrap {
+      width: var(--container);
+      margin-inline: auto;
+    }
+
+    .nav-wrap {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-family: "Cinzel", serif;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: #ffffff;
+      font-size: 1.02rem;
+      text-transform: uppercase;
+    }
+
+    .desktop-nav {
+      display: flex;
+      gap: 1.3rem;
+    }
+
+    .desktop-nav a,
+    .mobile-nav a {
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.03em;
+      color: var(--muted);
+      transition: color 0.2s ease;
+    }
+
+    .desktop-nav a:hover,
+    .desktop-nav a:focus-visible,
+    .mobile-nav a:hover,
+    .mobile-nav a:focus-visible {
+      color: #ffffff;
+    }
+
+    .menu-btn {
+      display: none;
+      min-width: 44px;
+      min-height: 44px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(19, 33, 67, 0.72);
+      color: var(--text);
+      font-weight: 700;
+      padding: 0.45rem 0.85rem;
+      cursor: pointer;
+    }
+
+    .menu-btn:focus-visible,
+    .btn:focus-visible,
+    .project-toggle:focus-visible,
+    .project-link:focus-visible,
+    .contact-link:focus-visible,
+    .social-link:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid rgba(94, 216, 255, 0.55);
+      outline-offset: 2px;
+    }
+
+    .mobile-nav {
+      display: none;
+      width: var(--container);
+      margin: 0 auto 0.9rem;
+      padding: 0.9rem;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(5, 10, 20, 0.96);
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .mobile-nav.is-open {
+      display: flex;
+    }
+
+    .mobile-nav a {
+      padding: 0.62rem 0.4rem;
+    }
+
+    .hero {
+      padding: 6.2rem 0 3.2rem;
+      position: relative;
+    }
+
+    .hero-shell {
+      width: var(--container);
+      margin: 0 auto;
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      background:
+        linear-gradient(180deg, rgba(18, 31, 60, 0.8), rgba(8, 13, 25, 0.92)),
+        radial-gradient(120% 120% at 90% -18%, rgba(216, 179, 107, 0.26), transparent 40%);
+      box-shadow: var(--shadow-soft);
+      padding: 2.2rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-shell::after {
+      content: "";
+      position: absolute;
+      inset: auto -12% -46% auto;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, rgba(94, 216, 255, 0.2), rgba(94, 216, 255, 0));
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 800;
+      font-size: 0.73rem;
+      color: var(--cyan);
+    }
+
+    .hero h1,
+    h2,
+    h3,
+    .stat-number {
+      font-family: "Cinzel", serif;
+    }
+
+    .hero h1 {
+      margin: 1rem 0 0;
+      font-size: clamp(2.1rem, 6vw, 4.5rem);
+      line-height: 1.06;
+      max-width: 980px;
+      letter-spacing: 0.01em;
+    }
+
+    .gradient-text {
+      color: transparent;
+      background: linear-gradient(90deg, var(--gold-strong), var(--cyan));
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .hero-copy {
+      max-width: 760px;
+      margin: 1.1rem 0 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.74;
+    }
+
+    .pill-row {
+      margin: 1.2rem 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+
+    .pill {
+      border: 1px solid rgba(188, 208, 248, 0.3);
+      border-radius: 999px;
+      padding: 0.4rem 0.72rem;
+      font-size: 0.73rem;
+      font-weight: 700;
+      color: #d5e3ff;
+      background: rgba(21, 36, 70, 0.56);
+      letter-spacing: 0.02em;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.72rem;
+      margin-top: 1.7rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      padding: 0.72rem 1.16rem;
+      transition: transform 0.22s ease, border-color 0.22s ease, opacity 0.22s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn.primary {
+      color: #081326;
+      background: linear-gradient(120deg, var(--gold), #efc979);
+      box-shadow: 0 12px 28px rgba(216, 179, 107, 0.35);
+    }
+
+    .btn.ghost {
+      border-color: rgba(148, 177, 233, 0.36);
+      background: rgba(19, 33, 67, 0.54);
+      color: var(--text);
+    }
+
+    .section {
+      padding: 5rem 0 0.4rem;
+    }
+
+    .section-head {
+      max-width: 780px;
+      margin-bottom: 1.4rem;
+    }
+
+    .section-head p {
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.17em;
+      color: var(--cyan);
+      font-size: 0.73rem;
+      font-weight: 800;
+    }
+
+    .section-head h2 {
+      margin: 0.74rem 0 0;
+      font-size: clamp(1.7rem, 4vw, 2.9rem);
+      line-height: 1.18;
+    }
+
+    .section-head .sub {
+      margin-top: 0.86rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .stats-grid,
+    .card-grid,
+    .projects-grid,
+    .contact-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .stats-grid {
+      margin-top: 1.8rem;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .stats-card,
+    .card,
+    .project-card,
+    .contact-card,
+    .form-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(165deg, rgba(19, 33, 67, 0.82), rgba(8, 13, 26, 0.95));
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+    }
+
+    .stats-card:hover,
+    .card:hover,
+    .project-card:hover,
+    .contact-card:hover,
+    .form-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(181, 201, 244, 0.42);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .stats-card {
+      padding: 1.1rem;
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 1.95rem;
+      color: var(--gold-strong);
+      line-height: 1;
+    }
+
+    .stat-label {
+      display: block;
+      margin-top: 0.46rem;
+      color: var(--muted);
+      font-size: 0.89rem;
+      line-height: 1.45;
+    }
+
+    .card-grid.cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card-grid.cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card,
+    .contact-card,
+    .form-card {
+      padding: 1.2rem;
+    }
+
+    .mini-label {
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: var(--cyan);
+    }
+
+    .card h3,
+    .contact-card h3,
+    .form-card h3,
+    .project-card h3 {
+      margin: 0.52rem 0 0;
+      font-size: 1.32rem;
+    }
+
+    .card p,
+    .contact-card p,
+    .form-note,
+    .project-card p {
+      margin: 0.6rem 0 0;
+      color: var(--muted);
+      line-height: 1.68;
+    }
+
+    .ventures-list {
+      margin: 0.95rem 0 0;
+      padding-left: 1.1rem;
+      color: #dae5ff;
+      line-height: 1.7;
+      font-size: 0.93rem;
+    }
+
+    .ventures-list li + li {
+      margin-top: 0.35rem;
+    }
+
+    .venture-link,
+    .project-link,
+    .contact-link,
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-top: 0.9rem;
+      font-weight: 800;
+      color: #f7dfad;
+      transition: opacity 0.2s ease;
+    }
+
+    .venture-link:hover,
+    .project-link:hover,
+    .contact-link:hover,
+    .social-link:hover {
+      opacity: 0.85;
+    }
+
+    .projects-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .project-card {
+      overflow: hidden;
+    }
+
+    .project-image {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 1rem;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      padding: 0.3rem 0.52rem;
+      border: 1px solid transparent;
+    }
+
+    .tag.live {
+      color: #092012;
+      background: #9be7bb;
+    }
+
+    .tag.demo {
+      color: #262009;
+      background: #f3d9a2;
+    }
+
+    .tag.stack {
+      color: #cde8ff;
+      border-color: rgba(157, 191, 248, 0.45);
+      background: rgba(21, 38, 75, 0.5);
+    }
+
+    .extra-project.is-hidden {
+      display: none;
+    }
+
+    .projects-action {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.2rem;
+    }
+
+    .project-toggle {
+      min-height: 46px;
+      border-radius: 12px;
+      border: 1px solid rgba(171, 198, 246, 0.38);
+      background: rgba(19, 33, 67, 0.55);
+      color: var(--text);
+      font-weight: 800;
+      padding: 0.7rem 1.1rem;
+      cursor: pointer;
+    }
+
+    .contact-grid {
+      grid-template-columns: 1fr 1.15fr;
+    }
+
+    .contact-list {
+      margin-top: 1rem;
+      display: grid;
+      gap: 0.72rem;
+    }
+
+    .contact-item {
+      margin: 0;
+      color: #d9e5ff;
+      line-height: 1.62;
+    }
+
+    .contact-item strong {
+      color: #ffffff;
+      margin-right: 0.25rem;
+    }
+
+    .social-row {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .form-card form {
+      display: grid;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.38rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #d8e4fd;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(129, 160, 220, 0.54);
+      border-radius: 11px;
+      background: rgba(8, 13, 26, 0.86);
+      color: var(--text);
+      font: inherit;
+      padding: 0.72rem 0.82rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 138px;
+    }
+
+    .danger-note {
+      margin-top: 0.85rem;
+      font-size: 0.88rem;
+      color: #f4bcc0;
+    }
+
+    footer {
+      margin-top: 4.1rem;
+      border-top: 1px solid var(--line);
+      padding: 1.05rem 0;
+      color: var(--muted);
+    }
+
+    .footer-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem;
+      font-size: 0.89rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1080px) {
+      .stats-grid,
+      .card-grid.cols-3,
+      .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .desktop-nav {
+        display: none;
+      }
+
+      .menu-btn {
+        display: inline-flex;
+      }
+
+      .hero {
+        padding-top: 5rem;
+      }
+
+      .hero-shell {
+        padding: 1.5rem;
+      }
+
+      .card-grid.cols-2,
+      .stats-grid,
+      .projects-grid,
+      .card-grid.cols-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#home">ANES</a>
+
+      <button id="menuBtn" class="menu-btn" type="button" aria-expanded="false" aria-controls="mobileNav">
+        Menu
+      </button>
+
+      <nav class="desktop-nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#ventures">Ventures</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <nav id="mobileNav" class="mobile-nav" aria-label="Mobile">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#ventures">Ventures</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+    <section id="home" class="hero">
+      <div class="hero-shell reveal">
+        <p class="eyebrow">Cloud and Systems Engineer - Algerie</p>
+        <h1>
+          De l'idee au lancement,
+          <span class="gradient-text">premium digital execution</span>
+          that stays stable in production.
+        </h1>
+        <p class="hero-copy">
+          I design and ship business websites, cloud setups, and managed hosting systems with one rule:
+          elegant frontend, serious backend, real results. Pas de blabla, only clean delivery.
+        </p>
+
+        <div class="pill-row" aria-label="Core roles">
+          <span class="pill">Co-Founder - Fikra Tech</span>
+          <span class="pill">Co-Founder - Hostec</span>
+          <span class="pill">Web Engineering</span>
+          <span class="pill">Cloud and DevOps</span>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn primary">View selected work</a>
+          <a href="#contact" class="btn ghost">Start your project</a>
+        </div>
+
+        <div class="stats-grid" id="trustStats" aria-label="Performance indicators">
+          <article class="stats-card reveal">
+            <span class="stat-number" data-count="15" data-suffix="+">15+</span>
+            <span class="stat-label">Client collaborations delivered with business-ready scope.</span>
+          </article>
+          <article class="stats-card reveal">
+            <span class="stat-number" data-count="90" data-suffix="%">90%</span>
+            <span class="stat-label">On-time delivery ratio across defined project milestones.</span>
+          </article>
+          <article class="stats-card reveal">
+            <span class="stat-number" data-count="1" data-prefix="< " data-suffix="h">&lt; 1h</span>
+            <span class="stat-label">Average first response on active client requests.</span>
+          </article>
+          <article class="stats-card reveal">
+            <span class="stat-number" data-count="99.9" data-suffix="%">99.9%</span>
+            <span class="stat-label">Target uptime for managed hosting environments.</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-wrap">
+        <div class="section-head reveal">
+          <p>About</p>
+          <h2>Engineer first. Builder always.</h2>
+          <p class="sub">
+            I work between technical precision and market clarity: architecture, deployment, UX polish,
+            and business conversion. Vision francaise, execution internationale.
+          </p>
+        </div>
+
+        <div class="card-grid cols-3">
+          <article class="card reveal">
+            <p class="mini-label">Stack</p>
+            <h3>Infrastructure to Interface</h3>
+            <p>Linux, Docker, AWS, Azure, CI/CD, Python, SQL, and modern frontend systems.</p>
+          </article>
+
+          <article class="card reveal">
+            <p class="mini-label">Method</p>
+            <h3>Clear Scope, Fast Delivery</h3>
+            <p>Defined milestones, transparent communication, and launch-ready quality from day one.</p>
+          </article>
+
+          <article class="card reveal">
+            <p class="mini-label">Outcome</p>
+            <h3>Trust and Revenue</h3>
+            <p>Products crafted to increase brand confidence, lead quality, and long-term scalability.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ventures" class="section">
+      <div class="section-wrap">
+        <div class="section-head reveal">
+          <p>Ventures</p>
+          <h2>Two ventures, one quality standard.</h2>
+          <p class="sub">Fikra Tech and Hostec are built around reliable delivery, clean architecture, and premium client care.</p>
+        </div>
+
+        <div class="card-grid cols-2">
+          <article class="card reveal">
+            <p class="mini-label">Co-Founder</p>
+            <h3>Fikra Tech</h3>
+            <p>Web and cloud studio focused on business websites, dashboards, and product launches.</p>
+            <ul class="ventures-list">
+              <li>Corporate websites with conversion-first UX</li>
+              <li>MVP platforms and internal tools</li>
+              <li>Brand positioning through modern design systems</li>
+            </ul>
+            <a href="https://fikratech.com" target="_blank" rel="noopener" class="venture-link">Visit Fikra Tech</a>
+          </article>
+
+          <article class="card reveal">
+            <p class="mini-label">Co-Founder</p>
+            <h3>Hostec</h3>
+            <p>Managed hosting subscriptions with monitoring, backups, SSL, and operational support.</p>
+            <ul class="ventures-list">
+              <li>Managed infrastructure with proactive monitoring</li>
+              <li>Security hardening and backup strategy</li>
+              <li>Client support designed for non-technical teams</li>
+            </ul>
+            <a href="https://hostec.com" target="_blank" rel="noopener" class="venture-link">Visit Hostec</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="section-wrap">
+        <div class="section-head reveal">
+          <p>Services</p>
+          <h2>What I can ship for your business</h2>
+          <p class="sub">From premium landing pages to production deployments, every delivery is scoped for speed and reliability.</p>
+        </div>
+
+        <div class="card-grid cols-3">
+          <article class="card reveal">
+            <p class="mini-label">01</p>
+            <h3>Business Websites</h3>
+            <p>Responsive websites with premium UI, conversion strategy, and fast loading performance.</p>
+          </article>
+
+          <article class="card reveal">
+            <p class="mini-label">02</p>
+            <h3>Web Apps and Dashboards</h3>
+            <p>Custom internal platforms and dashboards that simplify decision-making and operations.</p>
+          </article>
+
+          <article class="card reveal">
+            <p class="mini-label">03</p>
+            <h3>Cloud and DevOps</h3>
+            <p>Deployment pipelines, containerized workloads, and production hardening with observability.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-wrap">
+        <div class="section-head reveal">
+          <p>Portfolio</p>
+          <h2>Live client work plus concept demos</h2>
+          <p class="sub">Client projects are labeled LIVE. Concept builds are labeled DEMO to keep trust and transparency clear.</p>
+        </div>
+
+        <div class="projects-grid" id="projectGrid">
+          <article class="project-card reveal">
+            <img src="kachourlocation.jpg" alt="Kachour Location website preview" class="project-image" loading="lazy" />
+            <div class="project-content">
+              <div class="tag-row">
+                <span class="tag live">Live</span>
+                <span class="tag stack">Car Rental</span>
+              </div>
+              <h3>Kachour Location</h3>
+              <p>Car rental website with booking-focused structure and conversion funnel.</p>
+              <a href="https://kachourlocation.com" target="_blank" rel="noopener" class="project-link">Open live website</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <img src="gkMultiservice.jpg" alt="GK Multi Service website preview" class="project-image" loading="lazy" />
+            <div class="project-content">
+              <div class="tag-row">
+                <span class="tag live">Live</span>
+                <span class="tag stack">Service Company</span>
+              </div>
+              <h3>GK Multi Service</h3>
+              <p>Corporate website for industrial cleaning and car wash positioning.</p>
+              <a href="https://gkmultiservice.com" target="_blank" rel="noopener" class="project-link">Open live website</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <img src="fikratech.jpg" alt="Fikra Tech website preview" class="project-image" loading="lazy" />
+            <div class="project-content">
+              <div class="tag-row">
+                <span class="tag live">Live</span>
+                <span class="tag stack">Agency</span>
+              </div>
+              <h3>Fikra Tech</h3>
+              <p>Studio landing page focused on service clarity and premium visual identity.</p>
+              <a href="https://xxanesxx.github.io/" target="_blank" rel="noopener" class="project-link">Open live website</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal extra-project is-hidden">
+            <img src="beach.jpg" alt="St Trop Oran demo preview" class="project-image" loading="lazy" />
+            <div class="project-content">
+              <div class="tag-row">
+                <span class="tag demo">Demo</span>
+                <span class="tag stack">Beach Club</span>
+              </div>
+              <h3>St Trop Oran</h3>
+              <p>Multi-page beach club concept with reservation and brand storytelling flow.</p>
+              <a href="sttrop-index.html" target="_blank" rel="noopener" class="project-link">Open demo</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal extra-project is-hidden">
+            <img src="hotel.jpg" alt="Palma Sol Hotel demo preview" class="project-image" loading="lazy" />
+            <div class="project-content">
+              <div class="tag-row">
+                <span class="tag demo">Demo</span>
+                <span class="tag stack">Hospitality</span>
+              </div>
+              <h3>Palma Sol Hotel</h3>
+              <p>Hotel concept including booking, gallery, and contact funnel.</p>
+              <a href="hotel-index.html" target="_blank" rel="noopener" class="project-link">Open demo</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal extra-project is-hidden">
+            <img src="restaurant.jpg" alt="La Maison Restaurant demo preview" class="project-image" loading="lazy" />
+            <div class="project-content">
+              <div class="tag-row">
+                <span class="tag demo">Demo</span>
+                <span class="tag stack">Restaurant</span>
+              </div>
+              <h3>La Maison Restaurant</h3>
+              <p>Luxury restaurant concept featuring menu storytelling and reservation UX.</p>
+              <a href="restaurant-demo-index.html" target="_blank" rel="noopener" class="project-link">Open demo</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal extra-project is-hidden">
+            <img src="caffeteria.jpg" alt="Cafeteria Experience demo preview" class="project-image" loading="lazy" />
+            <div class="project-content">
+              <div class="tag-row">
+                <span class="tag demo">Demo</span>
+                <span class="tag stack">Cafe</span>
+              </div>
+              <h3>Cafeteria Experience</h3>
+              <p>Modern cafe concept with curated sections for menu, testimonials, and ambience.</p>
+              <a href="cafeteria-index.html" target="_blank" rel="noopener" class="project-link">Open demo</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal extra-project is-hidden">
+            <img src="renting_car.jpg" alt="LuxDrive Rental demo preview" class="project-image" loading="lazy" />
+            <div class="project-content">
+              <div class="tag-row">
+                <span class="tag demo">Demo</span>
+                <span class="tag stack">Mobility</span>
+              </div>
+              <h3>LuxDrive Rental</h3>
+              <p>Premium car rental concept with pricing-focused and booking-centric layout.</p>
+              <a href="rentcar-index.html" target="_blank" rel="noopener" class="project-link">Open demo</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-action">
+          <button id="toggleProjects" class="project-toggle" type="button" aria-expanded="false">Show demo projects</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-wrap">
+        <div class="section-head reveal">
+          <p>Contact</p>
+          <h2>Let us build something serious</h2>
+          <p class="sub">Share your project scope and timeline. You get a direct response and a structured next step.</p>
+        </div>
+
+        <div class="contact-grid">
+          <article class="contact-card reveal">
+            <h3>Direct contact</h3>
+            <p>Disponible en FR / EN pour collaborations locales et remote.</p>
+
+            <div class="contact-list">
+              <p class="contact-item"><strong>Email:</strong> <a class="contact-link" href="mailto:anes44603@gmail.com">anes44603@gmail.com</a></p>
+              <p class="contact-item"><strong>Phone:</strong> <a class="contact-link" href="tel:+213551054538">+213 551 054 538</a></p>
+              <p class="contact-item"><strong>Location:</strong> Algeria (Remote-friendly)</p>
+              <p class="contact-item"><strong>GitHub:</strong> <a class="contact-link" href="https://github.com/anesm-dev" target="_blank" rel="noopener">github.com/anesm-dev</a></p>
+              <p class="contact-item"><strong>LinkedIn:</strong> <a class="contact-link" href="https://www.linkedin.com/in/anes-hamouti-9593bb287/" target="_blank" rel="noopener">linkedin.com/in/anes-hamouti-9593bb287</a></p>
+            </div>
+
+            <div class="social-row">
+              <a class="social-link" href="https://fikratech.com" target="_blank" rel="noopener">Fikra Tech</a>
+              <a class="social-link" href="https://hostec.com" target="_blank" rel="noopener">Hostec</a>
+            </div>
+          </article>
+
+          <article class="form-card reveal">
+            <h3>Project brief</h3>
+            <p class="form-note">Tell me what you need, budget range, and target launch date.</p>
+
+            <form action="https://formspree.io/f/xnjjrdwj" method="POST">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" required autocomplete="name" />
+              </div>
+
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required autocomplete="email" />
+              </div>
+
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required placeholder="Example: Corporate website, 6 pages, launch in 3 weeks."></textarea>
+              </div>
+
+              <button type="submit" class="btn primary">Send message</button>
+            </form>
+            <p class="danger-note">Response time shown above is an operational target, not a legal SLA.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-wrap">
+      <p><span id="year"></span> Anes Hamouti Mohamed. All rights reserved.</p>
+      <p>Built for GitHub Pages deployment.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileNav = document.getElementById("mobileNav");
+      const toggleProjectsBtn = document.getElementById("toggleProjects");
+      const extraProjects = document.querySelectorAll(".extra-project");
+      const yearNode = document.getElementById("year");
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (yearNode) {
+        yearNode.textContent = String(new Date().getFullYear());
+      }
+
+      function closeMenu() {
+        if (!mobileNav || !menuBtn) return;
+        mobileNav.classList.remove("is-open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        document.body.classList.remove("nav-locked");
+      }
+
+      if (menuBtn && mobileNav) {
+        menuBtn.addEventListener("click", function () {
+          const open = mobileNav.classList.toggle("is-open");
+          menuBtn.setAttribute("aria-expanded", String(open));
+          document.body.classList.toggle("nav-locked", open);
+        });
+
+        mobileNav.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", closeMenu);
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            closeMenu();
+          }
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!mobileNav.classList.contains("is-open")) return;
+          if (event.target === menuBtn || menuBtn.contains(event.target)) return;
+          if (mobileNav.contains(event.target)) return;
+          closeMenu();
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 860) {
+            closeMenu();
+          }
+        });
+      }
+
+      if (toggleProjectsBtn) {
+        toggleProjectsBtn.addEventListener("click", function () {
+          const expanded = toggleProjectsBtn.getAttribute("aria-expanded") === "true";
+          const nextState = !expanded;
+
+          extraProjects.forEach(function (card) {
+            card.classList.toggle("is-hidden", !nextState);
+          });
+
+          toggleProjectsBtn.setAttribute("aria-expanded", String(nextState));
+          toggleProjectsBtn.textContent = nextState ? "Hide demo projects" : "Show demo projects";
+        });
+      }
+
+      const revealNodes = document.querySelectorAll(".reveal");
+      if (reduceMotion) {
+        revealNodes.forEach(function (node) {
+          node.classList.add("show");
+        });
+      } else {
+        const revealObserver = new IntersectionObserver(
+          function (entries, observer) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("show");
+              observer.unobserve(entry.target);
+            });
+          },
+          { threshold: 0.14 }
+        );
+
+        revealNodes.forEach(function (node) {
+          revealObserver.observe(node);
+        });
+      }
+
+      const statNodes = document.querySelectorAll(".stat-number[data-count]");
+      function animateStat(node) {
+        const goal = Number(node.dataset.count);
+        if (!Number.isFinite(goal)) return;
+
+        const hasDecimal = !Number.isInteger(goal);
+        const prefix = node.dataset.prefix || "";
+        const suffix = node.dataset.suffix || "";
+        const duration = 820;
+        const stepMs = 28;
+        const steps = Math.max(1, Math.round(duration / stepMs));
+        let step = 0;
+
+        const timer = setInterval(function () {
+          step += 1;
+          const progress = Math.min(1, step / steps);
+          const current = goal * progress;
+          const safeCurrent = hasDecimal ? current.toFixed(1) : String(Math.round(current));
+          node.textContent = prefix + safeCurrent + suffix;
+
+          if (progress >= 1) {
+            clearInterval(timer);
+            node.textContent = prefix + String(goal) + suffix;
+          }
+        }, stepMs);
+      }
+
+      if (reduceMotion) {
+        statNodes.forEach(function (node) {
+          const prefix = node.dataset.prefix || "";
+          const suffix = node.dataset.suffix || "";
+          node.textContent = prefix + String(node.dataset.count || "") + suffix;
+        });
+      } else {
+        const statObserver = new IntersectionObserver(
+          function (entries, observer) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              const node = entry.target;
+              if (node.dataset.animated === "true") return;
+              node.dataset.animated = "true";
+              animateStat(node);
+              observer.unobserve(node);
+            });
+          },
+          { threshold: 0.4 }
+        );
+
+        statNodes.forEach(function (node) {
+          statObserver.observe(node);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
