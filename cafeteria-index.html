@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Cafeteria</title>
+  <link rel="stylesheet" href="cafeteria-style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">☕ Caféria</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tagline">Fresh · Warm · Delicious</p>
+      <h1 class="hero-title">Welcome to <span>Caféria</span></h1>
+      <p class="hero-subtitle">Where every meal is crafted with love and every cup tells a story.</p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn btn-primary">Explore Menu</a>
+        <a href="#contact" class="btn btn-outline">Find Us</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="stats-bar">
+    <div class="stat">
+      <h3>500+</h3>
+      <p>Daily Guests</p>
+    </div>
+    <div class="stat">
+      <h3>40+</h3>
+      <p>Menu Items</p>
+    </div>
+    <div class="stat">
+      <h3>10+</h3>
+      <p>Years of Service</p>
+    </div>
+    <div class="stat">
+      <h3>98%</h3>
+      <p>Happy Customers</p>
+    </div>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section class="menu-section" id="menu">
+    <div class="section-header">
+      <p class="section-label">What We Offer</p>
+      <h2>Our Menu</h2>
+      <p class="section-desc">Freshly prepared every day with the finest ingredients.</p>
+    </div>
+
+    <div class="menu-tabs">
+      <button class="tab-btn active" data-category="all">All</button>
+      <button class="tab-btn" data-category="breakfast">Breakfast</button>
+      <button class="tab-btn" data-category="lunch">Lunch</button>
+      <button class="tab-btn" data-category="drinks">Drinks</button>
+      <button class="tab-btn" data-category="desserts">Desserts</button>
+    </div>
+
+    <div class="menu-grid" id="menuGrid"></div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section" id="about">
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80" alt="Cafeteria Interior"/>
+      <div class="about-badge">
+        <span>Est.</span>
+        <strong>2014</strong>
+      </div>
+    </div>
+    <div class="about-content">
+      <p class="section-label">Our Story</p>
+      <h2>More Than Just a Meal</h2>
+      <p>We believe that good food brings people together. Since 2014, Caféria has been the heart of the community — a place to gather, relax, and enjoy food made with genuine care.</p>
+      <p>Our chefs use locally sourced, seasonal ingredients to craft meals that nourish the body and warm the soul. Whether it's your morning coffee or a full lunch, we make it special.</p>
+      <div class="about-features">
+        <div class="feature"><i class="fas fa-leaf"></i><span>Fresh Ingredients</span></div>
+        <div class="feature"><i class="fas fa-heart"></i><span>Made with Love</span></div>
+        <div class="feature"><i class="fas fa-utensils"></i><span>Expert Chefs</span></div>
+        <div class="feature"><i class="fas fa-recycle"></i><span>Eco Friendly</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section">
+    <div class="section-header">
+      <p class="section-label">What People Say</p>
+      <h2>Customer Reviews</h2>
+    </div>
+    <div class="testimonials-wrapper">
+      <div class="testimonials-track" id="testimonialsTrack">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"The best coffee I've ever had. The atmosphere is cozy and the staff are so friendly. My go-to place every morning!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">S</div>
+            <div>
+              <strong>Sarah Mitchell</strong>
+              <span>Regular Customer</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Amazing lunch options every day. The grilled chicken sandwich is absolutely divine. Fresh and affordable!"</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">J</div>
+            <div>
+              <strong>James Carter</strong>
+              <span>Office Worker</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★☆</div>
+          <p>"Love the variety! The breakfast menu is fantastic and the smoothies are incredibly fresh. Highly recommend."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">A</div>
+            <div>
+              <strong>Amina Hassan</strong>
+              <span>Student</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Caféria has the warmest vibe. Perfect spot for a quick bite or a long chat over great food and drinks."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">R</div>
+            <div>
+              <strong>Ryan Brooks</strong>
+              <span>Freelancer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-dots" id="testimonialDots"></div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section" id="contact">
+    <div class="section-header">
+      <p class="section-label">Get in Touch</p>
+      <h2>Find Us</h2>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <div class="info-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h4>Location</h4>
+            <p>123 Blossom Street, Downtown, NY 10001</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-clock"></i>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>Mon – Fri: 7:00 AM – 8:00 PM</p>
+            <p>Sat – Sun: 8:00 AM – 6:00 PM</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-phone"></i>
+          <div>
+            <h4>Phone</h4>
+            <p>+1 (212) 555-0192</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h4>Email</h4>
+            <p>hello@caferia.com</p>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <h3>Send Us a Message</h3>
+        <div class="form-group">
+          <input type="text" id="nameInput" placeholder="Your Name" required/>
+        </div>
+        <div class="form-group">
+          <input type="email" id="emailInput" placeholder="Your Email" required/>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p class="form-success" id="formSuccess">✅ Message sent! We'll be in touch soon.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>☕ Caféria</h3>
+        <p>Where every meal is a moment worth savoring.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-hours">
+        <h4>Hours</h4>
+        <p>Mon – Fri: 7AM – 8PM</p>
+        <p>Sat – Sun: 8AM – 6PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Caféria. All rights reserved. Made with ❤️</p>
+    </div>
+  </footer>
+
+  <script src="cafeteria-script.js"></script>
+</body>
+</html>
